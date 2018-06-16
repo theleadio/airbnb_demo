@@ -16,10 +16,15 @@
 
     .item img {
       width: 100%;
+      cursor:pointer;
     }
 
     .item p {
       margin:0;
+    }
+
+    .selected {
+      outline: 1px solid red;
     }
 
     .location {
@@ -45,7 +50,7 @@
 
 <body>
 
-  <div class="container-fluid">
+  <div class="container-fluid px-4">
     <div class="row">
       <div class="col">
         <h1>Explore Malaysia</h1>
@@ -78,43 +83,45 @@
           <button type="submit" class='btn btn-primary'>Submit</button>
         </div>
 
+        <input type="hidden" name='selected_item'>
+
       </div> <!-- end of row -->
     </form>
 
     <hr/>
 
-    <div class="row">
+    <div class="row" id='tour'>
 
       <div class="col item">
-        <img src='cameron.jpg' />
+        <img src='images/cameron.jpg' />
         <p class='location'>Sightseeing &bull; Pahang</p>
         <p class='title'>Cameron Highland Tea Farm Trip</p>
         <p class='price'>RM120 per person</p>
       </div>
 
       <div class="col item">
-        <img src='kl.jpg' />
+        <img src='images/kl.jpg' />
         <p class='location'>Group Activity &bull; Kuala Lumpur</p>
         <p class='title'>Kuala Lumpur Culture Walk</p>
         <p class='price'>RM70 per person</p>
       </div>
 
       <div class="col item">
-        <img src='putrajaya.jpg' />
+        <img src='images/putrajaya.jpg' />
         <p class='location'>Outdoor &bull; PutraJaya</p>
         <p class='title'>Kayak at Putrajaya Lake</p>
         <p class='price'>RM140 per person</p>
       </div>
 
       <div class="col item">
-        <img src='melaka.jpg' />
+        <img src='images/melaka.jpg' />
         <p class='location'>Guided Walk &bull; PutraJaya</p>
         <p class='title'>Melaka Heritage Food Trail</p>
         <p class='price'>RM60 per person</p>
       </div>
 
       <div class="col item">
-        <img src='sarawak.jpg' />
+        <img src='images/sarawak.jpg' />
         <p class='location'>Culture Tour&bull; PutraJaya</p>
         <p class='title'>Sarawak Culture Village</p>
         <p class='price'>RM60 per person</p>
@@ -131,38 +138,38 @@
       </div>
     </div> <!-- end of row -->
 
-    <div class="row">
+    <div class="row" id='accomodation'>
 
       <div class="col item">
-        <img src='happiness_home.jpg' />
+        <img src='images/happiness_home.jpg' />
         <p class='location'>Entire Apartment &bull; 1 bed</p>
         <p class='title'>Happiness Home near Legoland</p>
         <p class='price'>RM123 per night</p>
       </div>
 
       <div class="col item">
-        <img src='cottage_homestay.jpg' />
+        <img src='images/cottage_homestay.jpg' />
         <p class='location'>Guesthouse&bull; 12 beds</p>
         <p class='title'>Rainforest Retreat Cottage</p>
         <p class='price'>RM700 per night</p>
       </div>
 
       <div class="col item">
-        <img src='full_facility_resort.jpg' />
+        <img src='images/full_facility_resort.jpg' />
         <p class='location'>Entire Apartment&bull; 5 beds</p>
         <p class='title'>Luxury Resort with Full Facilities</p>
         <p class='price'>RM384 per night</p>
       </div>
 
       <div class="col item">
-        <img src='serviced_apartment.jpg' />
+        <img src='images/serviced_apartment.jpg' />
         <p class='location'>Serviced Apartment &bull; 2 beds</p>
         <p class='title'>Cosy Serviced Apartment</p>
         <p class='price'>RM148 per night</p>
       </div>
 
       <div class="col item">
-        <img src='villa.jpg' />
+        <img src='images/villa.jpg' />
         <p class='location'>Villa&bull; 6 beds</p>
         <p class='title'>Para Para Resort</p>
         <p class='price'>RM288 per night</p>
@@ -173,10 +180,19 @@
 
   </div>
 
-
-
-
-
 </body>
+
+<script>
+  $('.item').click(function() {
+    $('.item').removeClass('selected');  // Clear previously selected item
+    $(this).addClass('selected'); // Set the current item to selected
+    var selected_item = $(this).find('.title').text(); // Get the name of clicked item
+    
+    // Assign the selected_item to hidden input value, so that it will be posted to us together with the guest details.
+    $("input[name='selected_item']").val(selected_item) 
+    
+  })
+</script>
+
 
 </html>

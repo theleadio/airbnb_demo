@@ -54,34 +54,34 @@
       </div>
     </div> <!-- end of row -->
 
-    <form action="https://formspree.io/laucherhan@gmail.com" method="POST">
+    <form method="POST">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-md">
           <input type="text" class='form-control' name='name' placeholder='Your name please'>
         </div>
 
-        <div class="col">
-            <input type="email" class="form-control" name='email' placeholder="Your email">
+        <div class="col-12 col-md">
+          <input type="email" class="form-control" name='email' placeholder="Your email">
         </div>
 
-        <div class="col">
-            <input type="date" class="form-control" name='arrival_date' placeholder="Check in date">
+        <div class="col-12 col-md">
+          <input type="date" class="form-control" name='arrival_date' placeholder="Check in date">
         </div>
 
-        <div class="col">
-            <input type="number" class="form-control" name='no_of_days' placeholder="Number of days">
+        <div class="col-12 col-md">
+          <input type="number" class="form-control" name='no_of_days' placeholder="Number of days">
         </div>
 
-        <div class="col">
+        <div class="col-12 col-md">
           <button type="button" class='btn btn-primary' onclick='submitForm();'>Submit</button>
         </div>
 
-          <input type="hidden" name='selected_item'>
+        <input type="hidden" name='selected_item'>
 
       </div>
     </form>
 
-    <hr/>
+    <hr />
 
     <div class='row' id='tour'>
       <div class="col-sm-3 col-md item">
@@ -92,143 +92,160 @@
       </div>
 
       <div class="col-sm-3 col-md item">
-          <img src='images/kl.jpg' />
-          <p class='location'>Group Activity &bull; Kuala Lumpur</p>
-          <p class='title'>Kuala Lumpur Culture Walk</p>
-          <p class='price'>RM70 per person</p>
-        </div>
-
-        <div class="col-sm-3 col-md item">
-          <img src='images/putrajaya.jpg' />
-          <p class='location'>Outdoor &bull; PutraJaya</p>
-          <p class='title'>Kayak at Putrajaya Lake</p>
-          <p class='price'>RM140 per person</p>
-        </div>
-
-        <div class="col-sm-3 col-md item">
-          <img src='images/melaka.jpg' />
-          <p class='location'>Guided Walk &bull; PutraJaya</p>
-          <p class='title'>Melaka Heritage Food Trail</p>
-          <p class='price'>RM60 per person</p>
-
-        </div>
-
-        <div class="d-sm-none d-md-block col-md item">
-          <img src='images/sarawak.jpg' />
-          <p class='location'>Culture Tour&bull; PutraJaya</p>
-          <p class='title'>Sarawak Culture Village</p>
-          <p class='price'>RM60 per person</p>
-        </div>
-      </div> <!-- end of row -->
-
-      <hr />
-
-      <div class="row">
-        <div class="col">
-          <h3>Where to stay</h3>
-        </div>
-      </div> <!-- end of row -->
-
-
-      <div class="row" id="accommodation">
-          <div class="col-sm-3 col-md item">
-              <img src='images/happiness_home.jpg' />
-              <p class='location'>Entire Apartment &bull; 1 bed</p>
-              <p class='title'>Happiness Home near Legoland</p>
-              <p class='price'>RM123 per night</p>
-            </div>
-
-            <div class="col-sm-3 col-md item">
-              <img src='images/cottage_homestay.jpg' />
-              <p class='location'>Guesthouse&bull; 12 beds</p>
-              <p class='title'>Rainforest Retreat Cottage</p>
-              <p class='price'>RM700 per night</p>
-            </div>
-
-            <div class="col-sm-3 col-md item">
-              <img src='images/full_facility_resort.jpg' />
-              <p class='location'>Entire Apartment&bull; 5 beds</p>
-              <p class='title'>Luxury Resort with Full Facilities</p>
-              <p class='price'>RM384 per night</p>
-            </div>
-
-            <div class="col-sm-3 col-md item">
-              <img src='images/serviced_apartment.jpg' />
-              <p class='location'>Serviced Apartment &bull; 2 beds</p>
-              <p class='title'>Cosy Serviced Apartment</p>
-              <p class='price'>RM148 per night</p>
-            </div>
-
-            <div class="d-sm-none d-md-block col-md item">
-              <img src='images/villa.jpg' />
-              <p class='location'>Villa&bull; 6 beds</p>
-              <p class='title'>Para Para Resort</p>
-              <p class='price'>RM288 per night</p>
-            </div>
+        <img src='images/kl.jpg' />
+        <p class='location'>Group Activity &bull; Kuala Lumpur</p>
+        <p class='title'>Kuala Lumpur Culture Walk</p>
+        <p class='price'>RM70 per person</p>
       </div>
 
+      <div class="col-sm-3 col-md item">
+        <img src='images/putrajaya.jpg' />
+        <p class='location'>Outdoor &bull; PutraJaya</p>
+        <p class='title'>Kayak at Putrajaya Lake</p>
+        <p class='price'>RM140 per person</p>
+      </div>
+
+      <div class="col-sm-3 col-md item">
+        <img src='images/melaka.jpg' />
+        <p class='location'>Guided Walk &bull; PutraJaya</p>
+        <p class='title'>Melaka Heritage Food Trail</p>
+        <p class='price'>RM60 per person</p>
+
+      </div>
+
+      <div class="d-sm-none d-md-block col-md item">
+        <img src='images/sarawak.jpg' />
+        <p class='location'>Culture Tour&bull; PutraJaya</p>
+        <p class='title'>Sarawak Culture Village</p>
+        <p class='price'>RM60 per person</p>
+      </div>
+    </div> <!-- end of row -->
+
+    <hr />
+
+    <div class="row">
+      <div class="col">
+        <h3>Where to stay</h3>
+      </div>
+    </div> <!-- end of row -->
+
+
+    <div class="row" id="accommodation">
+      <div class="col-sm-3 col-md item">
+        <img src='images/happiness_home.jpg' />
+        <p class='location'>Entire Apartment &bull; 1 bed</p>
+        <p class='title'>Happiness Home near Legoland</p>
+        <p class='price'>RM123 per night</p>
+      </div>
+
+      <div class="col-sm-3 col-md item">
+        <img src='images/cottage_homestay.jpg' />
+        <p class='location'>Guesthouse&bull; 12 beds</p>
+        <p class='title'>Rainforest Retreat Cottage</p>
+        <p class='price'>RM700 per night</p>
+      </div>
+
+      <div class="col-sm-3 col-md item">
+        <img src='images/full_facility_resort.jpg' />
+        <p class='location'>Entire Apartment&bull; 5 beds</p>
+        <p class='title'>Luxury Resort with Full Facilities</p>
+        <p class='price'>RM384 per night</p>
+      </div>
+
+      <div class="col-sm-3 col-md item">
+        <img src='images/serviced_apartment.jpg' />
+        <p class='location'>Serviced Apartment &bull; 2 beds</p>
+        <p class='title'>Cosy Serviced Apartment</p>
+        <p class='price'>RM148 per night</p>
+      </div>
+
+      <div class="d-sm-none d-md-block col-md item">
+        <img src='images/villa.jpg' />
+        <p class='location'>Villa&bull; 6 beds</p>
+        <p class='title'>Para Para Resort</p>
+        <p class='price'>RM288 per night</p>
+      </div>
     </div>
 
+  </div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAiGnlZ4uAAFR00g3p_ZnvNBXFQqlD2QhI",
-        authDomain: "airbnb-e5d07.firebaseapp.com",
-        databaseURL: "https://airbnb-e5d07.firebaseio.com",
-        projectId: "airbnb-e5d07",
-        storageBucket: "airbnb-e5d07.appspot.com",
-        messagingSenderId: "131403416817"
-      };
 
-      firebase.initializeApp(config);
-      var db = firebase.firestore();
-      db.settings({
-          timestampsInSnapshots: true
-      });
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAiGnlZ4uAAFR00g3p_ZnvNBXFQqlD2QhI",
+      authDomain: "airbnb-e5d07.firebaseapp.com",
+      databaseURL: "https://airbnb-e5d07.firebaseio.com",
+      projectId: "airbnb-e5d07",
+      storageBucket: "airbnb-e5d07.appspot.com",
+      messagingSenderId: "131403416817"
+    };
 
-      function submitForm() {
-        var name = $("input[name='name']").val();
-        var email = $("input[name='email']").val();
-        var arrival_date = $("input[name='arrival_date']").val();
-        var no_of_days = $("input[name='no_of_days']").val();
-        var selected_item = $("input[name='selected_item']").val()
+    firebase.initializeApp(config);
 
-        db.collection('bookings').add({name, email, arrival_date, no_of_days, selected_item})
-        .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
+    var db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+
+    function submitForm() {
+      var name = $("input[name='name']").val();
+      var email = $("input[name='email']").val();
+      var arrival_date = $("input[name='arrival_date']").val();
+      var no_of_days = $("input[name='no_of_days']").val();
+      var selected_item = $("input[name='selected_item']").val()
+
+      db.collection('bookings').add({ name, email, arrival_date, no_of_days, selected_item })
+        .then(function (docRef) {
+          alert("Booking submitted successfully");
         })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
+        .catch(function (error) {
+          alert("Error submitting booking");
+          console.error("Error: ", error);
         });
-      }
-    </script>
+    }
+  </script>
 
-    <script>
-      function getBookings() {
-        db.collection("bookings").get().then(function(querySnapshot) {
-          querySnapshot.forEach(function(doc) {
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-          });
+  <script>
+    function getBookings() {
+      db.collection("bookings").get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data());
         });
-      }
-    </script>
+      });
+    }
+  </script>
 
 
-    <script>
-      $('.item').click(function() {
-        $('.item').removeClass('selected'); // clear previously selected item
-        $(this).addClass('selected');
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAiGnlZ4uAAFR00g3p_ZnvNBXFQqlD2QhI",
+      authDomain: "airbnb-e5d07.firebaseapp.com",
+      databaseURL: "https://airbnb-e5d07.firebaseio.com",
+      projectId: "airbnb-e5d07",
+      storageBucket: "airbnb-e5d07.appspot.com",
+      messagingSenderId: "131403416817"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-        var selected_item = $(this).find('.title').text();
+  <script>
+    $('.item').click(function () {
+      $('.item').removeClass('selected'); // clear previously selected item
+      $(this).addClass('selected');
 
-        // We want to assign the value to our hidden value input in our form
-        // so that it can be sent to us together later.
-        $("input[name='selected_item']").val(selected_item)
-      })
-    </script>
+      var selected_item = $(this).find('.title').text();
+
+      // We want to assign the value to our hidden value input in our form
+      // so that it can be sent to us together later.
+      $("input[name='selected_item']").val(selected_item)
+    })
+  </script>
 
 </body>
+
 </html>

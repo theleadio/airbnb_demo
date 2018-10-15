@@ -1,198 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <title>LEAD Tour</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to LEAD Tour!</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-  <style>
-    body {
-      color: rgb(72,72,72);
-    }
 
-    .item img {
-      width: 100%;
-      cursor:pointer;
-    }
+    <style>
+      .item img {
+        width: 100%;
+        cursor:pointer;
+      }
 
-    .item p {
-      margin:0;
-    }
+      .location {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color:brown;
+      }
 
-    .selected {
-      outline: 1px solid red;
-    }
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
 
-    .location {
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight:bold;
-      color:brown;
-    }
+      .price {
+        font-size:20px;
+        font-weight: 400;
+      }
 
-    .title {
-      font-size: 16px;
-      font-weight: bold;
-    }
+      .item p {
+        margin:0;
+      }
 
-    .price {
-      font-size:14px;
-      font-weight:400;
-    }
-  </style>
-
+    </style>
 
 </head>
-
 <body>
 
-  <div class="container-fluid px-4">
-    <div class="row">
-      <div class="col">
-        <h1>Explore Malaysia</h1>
-        <h3>Popular experiences</h3>
-        <p>Experience local lifestyle led by locals</p>
-      </div>
-    </div>
-    <!-- end of row -->
-
-    <form method="POST" action="https://formspree.io/laucherhan@gmail.com">
+    <div class="container-fluid px-4">
       <div class="row">
-
         <div class="col">
-            <input type="text" class="form-control" name='name' placeholder="Your name please">
+          <h1>Explore Malaysia</h1>
+          <h3>Popular experiences</h3>
+          <p>Experience local lifestyle led by locals</p>
         </div>
-
-        <div class="col">
-            <input type="email" class="form-control" name='email' placeholder="Your email">
-        </div>
-
-        <div class="col">
-            <input type="date" class="form-control" name='arrival_date' placeholder="Check in date">
-        </div>
-
-        <div class="col">
-            <input type="number" class="form-control" name='no_of_days' placeholder="Number of days">
-        </div>
-
-        <div class="col">
-          <button type="submit" class='btn btn-primary'>Submit</button>
-        </div>
-
-        <input type="hidden" name='selected_item'>
-
       </div> <!-- end of row -->
-    </form>
 
-    <hr/>
+      <form action="https://formspree.io/laucherhan@gmail.com" method="POST">
+        <div class="row">
 
-    <div class="row" id='tour'>
+          <div class="col">
+            <input type="text" class='form-control' name='name' placeholder='Your name please'>
+          </div>
 
-      <div class="col item">
-        <img src='images/cameron.jpg' />
-        <p class='location'>Sightseeing &bull; Pahang</p>
-        <p class='title'>Cameron Highland Tea Farm Trip</p>
-        <p class='price'>RM120 per person</p>
-      </div>
+          <div class="col">
+            <input type="email" class="form-control" name='email' placeholder="Your email">
+          </div>
 
-      <div class="col item">
-        <img src='images/kl.jpg' />
-        <p class='location'>Group Activity &bull; Kuala Lumpur</p>
-        <p class='title'>Kuala Lumpur Culture Walk</p>
-        <p class='price'>RM70 per person</p>
-      </div>
+          <div class="col">
+              <input type="date" class="form-control" name='arrival_date' placeholder="Check in date">
+          </div>
 
-      <div class="col item">
-        <img src='images/putrajaya.jpg' />
-        <p class='location'>Outdoor &bull; PutraJaya</p>
-        <p class='title'>Kayak at Putrajaya Lake</p>
-        <p class='price'>RM140 per person</p>
-      </div>
+          <div class="col">
+              <input type="number" class="form-control" name='no_of_days' placeholder="Number of days">
+          </div>
 
-      <div class="col item">
-        <img src='images/melaka.jpg' />
-        <p class='location'>Guided Walk &bull; PutraJaya</p>
-        <p class='title'>Melaka Heritage Food Trail</p>
-        <p class='price'>RM60 per person</p>
-      </div>
+          <div class="col">
+            <button type="submit" class='btn btn-primary'>Submit</button>
+          </div>
 
-      <div class="col item">
-        <img src='images/sarawak.jpg' />
-        <p class='location'>Culture Tour&bull; PutraJaya</p>
-        <p class='title'>Sarawak Culture Village</p>
-        <p class='price'>RM60 per person</p>
-      </div>
+          <input type="hidden" name='selected_item'>
 
+        </div> <!-- end of row -->
+      </form>
+
+
+
+      <div class='row' id='tour'>
+        <div class="col-sm-3 col-md item">
+            <img src="images/cameron.jpg" alt="" />
+            <p class='location'>Sightseeing &bull; Pahang</p>
+            <p class='title'>Cameron Highland Tea Farm Trip</p>
+            <p class="price">RM 120 per person</p>
+        </div>
+
+        <div class="col-sm-3 col-md item">
+            <img src='images/kl.jpg' />
+            <p class='location'>Group Activity &bull; Kuala Lumpur</p>
+            <p class='title'>Kuala Lumpur Culture Walk</p>
+            <p class='price'>RM70 per person</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/putrajaya.jpg' />
+            <p class='location'>Outdoor &bull; PutraJaya</p>
+            <p class='title'>Kayak at Putrajaya Lake</p>
+            <p class='price'>RM140 per person</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/melaka.jpg' />
+            <p class='location'>Guided Walk &bull; PutraJaya</p>
+            <p class='title'>Melaka Heritage Food Trail</p>
+            <p class='price'>RM60 per person</p>
+
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/sarawak.jpg' />
+            <p class='location'>Culture Tour&bull; Sarawak</p>
+            <p class='title'>Sarawak Culture Village</p>
+            <p class='price'>RM60 per person</p>
+          </div>
+
+        </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col">
+          <h3>Where to stay</h3>
+        </div>
+      </div> <!-- end of row -->
+
+      <div class="row" id="accommodation">
+        <div class="col-sm-3 col-md item">
+            <img src='images/happiness_home.jpg' />
+            <p class='location'>Entire Apartment &bull; 1 bed</p>
+            <p class='title'>Happiness Home near Legoland</p>
+            <p class='price'>RM123 per night</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/cottage_homestay.jpg' />
+            <p class='location'>Guesthouse&bull; 12 beds</p>
+            <p class='title'>Rainforest Retreat Cottage</p>
+            <p class='price'>RM700 per night</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/full_facility_resort.jpg' />
+            <p class='location'>Entire Apartment&bull; 5 beds</p>
+            <p class='title'>Luxury Resort with Full Facilities</p>
+            <p class='price'>RM384 per night</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/serviced_apartment.jpg' />
+            <p class='location'>Serviced Apartment &bull; 2 beds</p>
+            <p class='title'>Cosy Serviced Apartment</p>
+            <p class='price'>RM148 per night</p>
+          </div>
+
+          <div class="col-sm-3 col-md item">
+            <img src='images/villa.jpg' />
+            <p class='location'>Villa&bull; 6 beds</p>
+            <p class='title'>Para Para Resort</p>
+            <p class='price'>RM288 per night</p>
+          </div>
     </div>
-    <!-- end of row -->
 
-    <hr/>
 
-    <div class="row">
-      <div class="col">
-        <h3>Where to stay</h3>
-      </div>
-    </div> <!-- end of row -->
-
-    <div class="row" id='accomodation'>
-
-      <div class="col item">
-        <img src='images/happiness_home.jpg' />
-        <p class='location'>Entire Apartment &bull; 1 bed</p>
-        <p class='title'>Happiness Home near Legoland</p>
-        <p class='price'>RM123 per night</p>
-      </div>
-
-      <div class="col item">
-        <img src='images/cottage_homestay.jpg' />
-        <p class='location'>Guesthouse&bull; 12 beds</p>
-        <p class='title'>Rainforest Retreat Cottage</p>
-        <p class='price'>RM700 per night</p>
-      </div>
-
-      <div class="col item">
-        <img src='images/full_facility_resort.jpg' />
-        <p class='location'>Entire Apartment&bull; 5 beds</p>
-        <p class='title'>Luxury Resort with Full Facilities</p>
-        <p class='price'>RM384 per night</p>
-      </div>
-
-      <div class="col item">
-        <img src='images/serviced_apartment.jpg' />
-        <p class='location'>Serviced Apartment &bull; 2 beds</p>
-        <p class='title'>Cosy Serviced Apartment</p>
-        <p class='price'>RM148 per night</p>
-      </div>
-
-      <div class="col item">
-        <img src='images/villa.jpg' />
-        <p class='location'>Villa&bull; 6 beds</p>
-        <p class='title'>Para Para Resort</p>
-        <p class='price'>RM288 per night</p>
-      </div>
-
-    </div>
-    <!-- end of row -->
-
-  </div>
+    </div><!-- end of container -->
 
 </body>
-
-<script>
-  $('.item').click(function() {
-    $('.item').removeClass('selected');  // Clear previously selected item
-    $(this).addClass('selected'); // Set the current item to selected
-    var selected_item = $(this).find('.title').text(); // Get the name of clicked item
-    
-    // Assign the selected_item to hidden input value, so that it will be posted to us together with the guest details.
-    $("input[name='selected_item']").val(selected_item) 
-    
-  })
-</script>
-
-
 </html>
